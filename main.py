@@ -1,5 +1,6 @@
 import random
 
+# seznam slov
 guesing_word = [
 "pizza", "emergency", "check", "descent", 
 "cancel", "snub", "dump", "army", 
@@ -111,8 +112,9 @@ print('''
 ''')
 
 while True:
-  print(underscores_word)
-  user_input = input("Zadej písmeno: ")
+  for item in underscores_word:
+    print(item, end=" ")
+  user_input = input("\nZadej písmeno: ")
 
   if user_input in word_char:
     print("You'r guess was correct "+ str(user_input) +" is in the word!\n")
